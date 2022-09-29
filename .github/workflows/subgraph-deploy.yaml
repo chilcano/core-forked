@@ -47,7 +47,7 @@ jobs:
 
   changelog:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged && github.actor != 'arabot-1' && contains(github.event.pull_request.labels.*.name, 'subgraph:') 
+    if: github.event.pull_request.merged && github.actor != 'arabot-1' && contains(toJson(github.event.pull_request.labels.*.name), 'subgraph:') 
     steps:
       - name: Check Job execution
         run: echo "Check Job execution"
@@ -101,7 +101,7 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     needs: [prepare]
-    if: needs.prepare.outputs.environment != '' && contains(github.event.pull_request.labels.*.name, 'subgraph:')
+    if: needs.prepare.outputs.environment != '' && contains(toJson(github.event.pull_request.labels.*.name), 'subgraph:')
     environment: ${{ needs.prepare.outputs.environment }}
     strategy:
       fail-fast: false
