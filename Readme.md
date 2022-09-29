@@ -25,6 +25,7 @@ The labels also indicate how the npm packages will be bumped to the next version
 | release:major | major bump for `@aragon/core-contracts` and `@aragon/core-contracts-ethers` |
 
 ## Pull request commands
+
 Certain actions can be triggered via a command to a pull request. To issue a command just comment on a pull request with one of these commands.
 
 | Command                                      | Description                                                 |
@@ -33,3 +34,13 @@ Certain actions can be triggered via a command to a pull request. To issue a com
 | `/mythx full (quick \| standard \| deep)`    | Scans the all files for this pull request                   |
 | `/release (patch \| minor \| major)`         | Adds the proper release label to this pull request          |
 | `/subgraph (patch \| minor \| major)`        | Adds the proper subgraph release label to this pull request |
+
+## Pull request labels
+
+Certain GitHub actions can be triggered labeling the PR.
+
+| Command                    | Description                                    |
+| ---------------------------| ---------------------------------------------- |
+| `subgraph`                 | ????                                           |
+| `subgraph:patch`           | ????                                           |
+| `contracts`                | ????                                           |
