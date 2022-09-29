@@ -34,13 +34,3 @@ Certain actions can be triggered via a command to a pull request. To issue a com
 | `/mythx full (quick \| standard \| deep)`    | Scans the all files for this pull request                   |
 | `/release (patch \| minor \| major)`         | Adds the proper release label to this pull request          |
 | `/subgraph (patch \| minor \| major)`        | Adds the proper subgraph release label to this pull request |
-
-## Pull request labels
-
-Certain GitHub actions can be triggered labeling the PR.
-
-| Command                    | Description                                    |
-| ---------------------------| ---------------------------------------------- |
-| `subgraph`                 | ????                                           |
-| `subgraph:patch`           | ????                                           |
-| `contracts`                | ????                                           |

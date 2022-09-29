@@ -4,7 +4,7 @@
 
 Ensure the monorepo’s dependencies are installed:
 
-```console
+```sh
 yarn
 ```
 
@@ -12,7 +12,7 @@ yarn
 
 make sure the Contracts package is compiled:
 
-```console
+```sh
 cd packages/contracts
 yarn build
 ```
@@ -28,7 +28,7 @@ Make sure proper env variables are provided as explained bellow:
 
 You can build and deploy the subgraph using a single `yarn deploy` command:
 
-```console
+```sh
 yarn deploy
 ```
 
@@ -73,7 +73,7 @@ yarn start:dev
 
 to stop:
 
-```console
+```sh
 yarn stop:dev
 ```
 
