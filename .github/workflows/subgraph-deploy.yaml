@@ -50,7 +50,7 @@ jobs:
             echo "VAR_PR_LABELS = ${VAR_PR_LABELS}"
             echo "VAR_PR_LABEL_NAMES = ${VAR_PR_LABEL_NAMES}"
             echo "Label_is_in_PR_1 = ${{ contains(toJson(github.event.pull_request.labels.*.name), 'subgraph:') }}"
-            echo "Label_is_in_PR_2 = ${{ contains(toJson(${ENV_GITHUB_PR_LABEL_NAMES}, 'subgraph:') }}"
+            echo "Label_is_in_PR_2 = ${{ contains(toJson(${VAR_PR_LABEL_NAMES}, 'subgraph:') }}"
 
   changelog:
     runs-on: ubuntu-latest
