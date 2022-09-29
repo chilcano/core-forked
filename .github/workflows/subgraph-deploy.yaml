@@ -128,3 +128,4 @@ jobs:
       #     THEGRAPH_USERNAME: aragon
       #     SUBGRAPH_NAME: zaragoza
       #     GRAPH_KEY: ${{ secrets.GRAPH_KEY }}
+ 
