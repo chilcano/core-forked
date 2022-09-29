@@ -38,17 +38,12 @@ jobs:
     #   matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
     steps:
         - name: Dump variables
-          env:
-            ENV_GITHUB_PR_LABELS: ${{ toJson(github.event.pull_request.labels) }}
-            ENV_GITHUB_PR_LABEL_NAMES: ${{ toJson(github.event.pull_request.labels.*.name) }}
           run: |
-            echo "ENV_GITHUB_PR_LABELS = ${ENV_GITHUB_PR_LABELS}"
-            echo "ENV_GITHUB_PR_LABEL_NAMES = ${ENV_GITHUB_PR_LABEL_NAMES}"
             VAR_PR_LABELS=${{ toJson(github.event.pull_request.labels) }}
             VAR_PR_LABEL_NAMES=${{ toJson(github.event.pull_request.labels.*.name) }}
-            echo "VAR_PR_LABELS = ${VAR_PR_LABELS}"
-            echo "VAR_PR_LABEL_NAMES = ${VAR_PR_LABEL_NAMES}"
-            echo "Label_is_in_PR_1 = ${{ contains(toJson(github.event.pull_request.labels.*.name), 'subgraph:') }}"
+            echo "PR_LABELS = ${VAR_PR_LABELS}"
+            echo "PR_LABEL_NAMES = ${VAR_PR_LABEL_NAMES}"
+            echo "Label_is_in_PR = ${{ contains(toJson(github.event.pull_request.labels.*.name), 'subgraph:') }}"
 
   changelog:
     runs-on: ubuntu-latest
