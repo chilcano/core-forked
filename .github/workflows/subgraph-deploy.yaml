@@ -41,7 +41,7 @@ jobs:
           run: |
             VAR_PR_LABELS="${{ toJson(github.event.pull_request.labels) }}"
             VAR_PR_LABEL_NAMES="${{ toJson(github.event.pull_request.labels.*.name) }}"
-            echo "PR_LABELS = $VAR_PR_LABELS"
+            echo "PR_LABELS = ${VAR_PR_LABELS}"
             echo "PR_LABEL_NAMES = $VAR_PR_LABEL_NAMES"
             echo "Label_is_in_PR = ${{ contains(toJson(github.event.pull_request.labels.*.name), 'subgraph:') }}"
 
