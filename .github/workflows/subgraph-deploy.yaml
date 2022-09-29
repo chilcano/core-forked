@@ -39,7 +39,6 @@ jobs:
     steps:
         - name: Dump variables
           env:
-            ENV_GITHUB_EVENT: ${{ toJson(github.event) }}
             ENV_GITHUB_PR_LABELS: ${{ toJson(github.event.pull_request.labels) }}
             ENV_GITHUB_PR_LABEL_NAMES: ${{ toJson(github.event.pull_request.labels.*.name) }}
           run: |
